@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+    background: linear-gradient(45deg, #2c3c4c, #225051);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-left {
+
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 2em;
+    padding: 0 20px;
+}
+
+.nav-underline {
+    width: 0;
+    margin: auto;
+    height: 2px;
+    background-color: #ddd;
+    transition: .25s ease-in;
+}
+
+.nav-item:hover .nav-underline {
+    width: calc(100% - 20px);
+    padding-left: 10px;
+}
+
+#nav-logo {
+    width: 4em;
+}
+
+.content {
+    min-height: calc(100vh - (24em + 45px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .container {
+    display: flex;
+    width: 90em;
+}
+
+.content .container .main-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .container .main-info h1 {
+    font-size: 4em;
+    margin: 20px 0 0 0;
+    color: #ddd;
+}
+
+.content .container .main-info h2 {
+    font-size: 3.5em;
+    margin: 20px 0 0 0;
+    color: #ddd;
+}
+
+.content .container .main-info p {
+    font-size: 2em;
+    margin: 20px 0 0 0;
+    text-align: justify;
+    color: #ddd;
+}
+
+.content .container .main-info .buttons {
+    display: flex;
+    margin: 20px 0;
+}
+
+.content .container .main-info .buttons a {
+    text-decoration: none;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    transition: .25s ease-in;
+}
+
+.content .container .main-info .buttons a:hover {
+    background-color: #5fa052;
+    border: 1px #5fa052 solid;
+}
+
+footer {
+    width: 100%;
+}
+
+@media(max-height: 900px) {
+    .content { min-height: calc(100% - (4em + 45px)); }
+    footer { height: 0; }
+}
+
+@media(max-width: 90em){
+    .content .container { padding: 0 40px; }
+}
