@@ -29,6 +29,7 @@ nav {
     color: #ddd;
     font-size: 2em;
     padding: 0 20px;
+    transition: all 0.25s ease-in-out;
 }
 
 .nav-underline {
@@ -45,7 +46,7 @@ nav {
 }
 
 #nav-logo {
-    width: 4em;
+    width: 5em;
 }
 
 .content {
@@ -53,6 +54,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.25s ease-in-out;
 }
 
 .content .container {
@@ -111,6 +113,16 @@ footer {
 @media(max-height: 900px) {
     .content { min-height: calc(100% - (4em + 45px)); }
     footer { height: 0; }
+}
+
+@media(max-width: 900px) {
+    .nav-item { font-size: 60%; }
+    .content { font-size: 60%; }
+}
+
+@media(max-width: 600px) {
+    .nav-item { font-size: 38%; }
+    .content { font-size: 38%; }
 }
 
 @media(max-width: 90em){
