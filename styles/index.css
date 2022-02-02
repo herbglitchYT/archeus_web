@@ -24,6 +24,10 @@ nav {
     align-items: flex-end;
 }
 
+.nav-right .nav-item {
+    transition: 1s linear;
+}
+
 .nav-link {
     text-decoration: none;
     color: #ddd;
@@ -47,6 +51,10 @@ nav {
 
 #nav-logo {
     width: 5em;
+}
+
+#nav-mobile-btn {
+    display: none;
 }
 
 .content {
@@ -115,16 +123,30 @@ footer {
     footer { height: 0; }
 }
 
-@media(max-width: 900px) {
-    .nav-item { font-size: 60%; }
-    .content { font-size: 60%; }
-}
-
-@media(max-width: 600px) {
-    .nav-item { font-size: 38%; }
-    .content { font-size: 38%; }
-}
-
 @media(max-width: 90em){
-    .content .container { padding: 0 40px; }
+    .content .container { padding: 0 2em; }
+
+    #nav-mobile-btn {
+        display: initial;
+        /*position: fixed;*/
+        cursor: pointer;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+    }
+
+    nav .nav-item {
+        height: 0;
+        width: 100%;
+        float: left;
+        overflow-y: hidden;
+        size: 2.5em;
+    }
+
+    nav .active .nav-item {
+        height: 100%;
+    }
 }
